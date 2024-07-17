@@ -8,6 +8,11 @@ This project contains two scripts: one written in Terraform and the other in Pow
 
 - Install Terraform from [Terraform downloads page](https://www.terraform.io/downloads.html)
 
+### Service Account
+- Create Service Account in your Google Cloud Storage (IAM & Admin)
+- Assign the required roles (Storage Admin)
+- Create New key (JSON) and save it into terraform directory with name "credentials.json"
+
 ### Configuration
 
 - Create a `terraform.tfvars` file from `terraform.tfvars.example`
