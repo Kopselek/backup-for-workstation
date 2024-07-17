@@ -3,6 +3,15 @@ resource "google_storage_bucket" "backup_bucket" {
   name          = each.value
   location      = "EU"
   force_destroy = true
+
+  lifecycle_rule {
+    action {
+      type = "Delete"
+    }
+    condition {
+      age = 30
+    }
+  }
 }
 
 
